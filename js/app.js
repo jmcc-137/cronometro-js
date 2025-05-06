@@ -1,6 +1,7 @@
+
 let tiempoRef = Date.now()
 let acumulado = 0
-let cronometrar = true
+let cronometrar = false
 
 setInterval(() =>{
     let tiempo =document.getElementById("tiempo")
@@ -22,4 +23,25 @@ function formatearMs(tiempo_ms){
     }
     return H.ceros(2)+":"+M.ceros(2)+":"+S.ceros(2)+"."+MS.ceros(3)
 
+}
+
+function iniciar(){
+    cronometrar = true;
+    let pausa = document.getElementById("pausa")
+    pausa.innerHTML =
+    /*html*/`
+    <p onclick="pausar()""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>pause</title><path d="M14,19H18V5H14M6,19H10V5H6V19Z" /></svg></p>
+    `
+}
+
+function pausar(){
+    cronometrar = false;
+}
+function reiniciar(){
+    acumulado = 0;
+    let pausa = document.getElementById("pausa")
+    pausa.innerHTML = "";
+    
+        
+        
 }
