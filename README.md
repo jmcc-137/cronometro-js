@@ -38,5 +38,4 @@ cronometro/
 3. ¡Listo! Usa los botones para controlar el cronómetro.
 
 ```bash
-git clone https://github.com/tuusuario/cronometro-js.git
-cd cronometro-js
+git clone https://github.com/jmcc-137/cronometro-js.git
